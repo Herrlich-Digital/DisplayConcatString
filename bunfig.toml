@@ -1,2 +1,7 @@
 [install]
-registry = "https://npm.pkg.github.com/"
+# Default registry for public packages
+registry = "https://registry.npmjs.org/"
+
+# GitHub registry for your organization's packages
+[install.scopes]
+"@Herrlich-Digital" = "https://npm.pkg.github.com/"
