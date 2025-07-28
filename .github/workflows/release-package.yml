@@ -1,0 +1,36 @@
+name: Publish NPM package to GH packages
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Configure npm registry
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GH_TOKEN }}" > ~/.npmrc
+          echo "@pr0gstar:registry=https://npm.pkg.github.com/" >> ~/.npmrc
+
+      - name: 📥 Download deps
+        run: bun i --frozen-lockfile
+
+      - name: 🛠️ Build
+        run: bun run build
+
+      - name: 🚀 Publish
+        run: bun publish --verbose
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.GH_TOKEN }}
