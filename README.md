@@ -1,4 +1,4 @@
-# TryCatch-Wrapper
+# Display Concat String
 
 ![Release-Package](https://github.com/HerrlichDigital/DisplayConcatString/actions/workflows/release-package.yml/badge.svg)
 

@@ -1,5 +1,5 @@
 {
-  "name": "@HerrlichDigital/DisplayConcatString",
+  "name": "@Herrlich-Digital/DisplayConcatString",
   "description": "A simple try-catch wrapper for TypeScript inspired by Golang",
   "version": "1.0.0",
   "entrypoint": "index.ts",
@@ -22,16 +22,16 @@
     "typescript": "^5"
   },
   "keywords": [
-    "try",
-    "catch",
-    "trycatch",
-    "wrapper",
+    "Concat",
+    "String",
+    "displayname",
+    "array",
     "typescript"
   ],
   "author": "Christoph Planken <Herrlich Digital>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HerrlichDigital/DisplayConcatString.git"
+    "url": "https://github.com/Herrlich-Digital//DisplayConcatString.git"
   }
 }
