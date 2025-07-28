@@ -22,7 +22,7 @@ jobs:
       - name: Configure npm registry
         run: |
           echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GH_TOKEN }}" > ~/.npmrc
-          echo "@pr0gstar:registry=https://npm.pkg.github.com/" >> ~/.npmrc
+          echo "@Herrlich-Digital:registry=https://npm.pkg.github.com/" >> ~/.npmrc
 
       - name: 📥 Download deps
         run: bun i --frozen-lockfile
